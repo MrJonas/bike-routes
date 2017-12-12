@@ -12,10 +12,10 @@ var fs = require('mz/fs');
 /* eslint-disable  no-console */
 
 
-const options = {
-    key: fs.readFileSync(__dirname + '/cert/server.key'),
-    cert: fs.readFileSync(__dirname + '/cert/server.crt')
-}
+// const options = {
+//     key: fs.readFileSync(__dirname + '/cert/server.key'),
+//     cert: fs.readFileSync(__dirname + '/cert/server.crt')
+// }
 
 const port = 3010;
 

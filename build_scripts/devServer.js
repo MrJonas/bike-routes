@@ -10,12 +10,10 @@ import api from '../api/';
 const port = 3010;
 const app = express();
 
-console.log(__dirname);
-
-const options = {
-    key: fs.readFileSync(__dirname + '/cert/server.key'),
-    cert:  fs.readFileSync(__dirname + '/cert/server.crt')
-};
+// const options = {
+//     key: fs.readFileSync(__dirname + '/cert/server.key'),
+//     cert:  fs.readFileSync(__dirname + '/cert/server.crt')
+// };
 
 const webpackMiddleware = require('webpack-dev-middleware');
 const webpack = require('webpack');
