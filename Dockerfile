@@ -17,4 +17,6 @@ ENV NODE_ENV production
 #RUN forever-service install bike-app -e "NODE_ENV=production"
 #RUN n
 
-RUN node app.js
+#CMD [ "node", "app.js" ]
+
+ENTRYPOINT node app.js
