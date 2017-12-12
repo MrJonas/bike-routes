@@ -4,7 +4,7 @@ var Grid = require('gridfs-stream');
 const app = express();
 const config = require('./config');
 Grid.mongo = mongoose.mongo;
-mongoose.connect(config.uri);
+mongoose.connect(config.uri, {useMongoClient:true});
 var conn = mongoose.connection;
 var gfs;
 
