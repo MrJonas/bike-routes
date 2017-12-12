@@ -1,0 +1,237 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    min-height: 100%;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.messageBox {
+    border: 1px solid gainsboro;
+    padding: 25px 35px;
+    margin: 30px 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .messageBox {
+        padding: 15px 5px;
+        margin: 5px 5px;
+        margin-bottom: 15px;
+    }
+}
+
+.header {
+    text-align: center;
+    margin: 20px 5px 30px 5px;
+}
+
+a.navbar-brand {
+    color: white;
+}
+
+a.nav-link {
+    color: white;
+    border-bottom: 2px solid transparent;
+    margin-left: 2px;
+}
+
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+}
+
+/* mouse over link */
+a.nav-link:hover {
+    border-bottom: 2px solid white;
+}
+
+/* selected link */
+a.nav-link:active {
+    border-bottom: 2px solid white;
+}
+
+a.active.nav-link {
+    border-bottom: 2px solid white;
+}
+
+@media only screen and (max-width: 768px) {
+    h4 {
+        margin: 20px 5px 10px 5px;
+    }
+}
+
+.logo {
+    height: 97px;
+}
+
+@media only screen and (max-width: 768px) {
+    .actionBox {
+        text-align: center;
+    }
+}
+
+h4 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    h4 {
+        margin-bottom: 10px;
+    }
+}
+
+.footer {
+    padding: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    background-color: #343a40;
+}
+
+.bg-inverse {
+    background-color: #343a40 !important;
+}
+
+.welcome-box {
+    min-height: 600px;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+    ), url('/img/bike.jpg') no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.welcome-box-text {
+    background-color: rgba(232, 232, 232, 0.8);
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    max-width: 750px;
+    margin-top: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+    .welcome-box-text {
+        margin-top: 20px;
+    }
+}
+
+.counter-box {
+    background-color: white;
+}
+
+body {
+    background: linear-gradient(
+        rgba(200, 200, 200, 0.4),
+        rgba(200, 200, 200, 0.4)
+    ), url('/img/topography.png') repeat;
+}
+
+.page-layout {
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.map-container {
+    position: absolute;
+    top: 56px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.map-sidebar {
+    background-color: white;
+    float: left;
+    width: 28%;
+    max-width: 400px;
+    height: calc(100vh - 56px);
+    overflow-y: scroll;
+}
+
+.map-view-box {
+    width: auto;
+    overflow: hidden;
+    height: calc(100vh - 56px);
+}
+
+.map-view {
+    width: auto;
+    overflow: hidden;
+    height: calc(100vh - 141px);
+}
+
+.large-map-view {
+    height: calc(100vh - 56px);
+}
+
+.map-control-panel {
+    background-color: white;
+    transition: height 0.4s ease-out;
+    height: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.show-map-control-panel {
+    height: 0px;
+    padding: 0px;
+    height: 85px;
+    -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.map-route-list {
+    width: 100%;
+}
+
+.comment-red {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.comment-blue {
+    padding: 10px;
+    border-radius: 5pxs;
+}
+
+.route-text img {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.route-text a {
+    color: blue;
+}
+.route-list-page{
+    min-height: calc(100vh - 76px);
+}
+
+.route-card {
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+.route-card:hover { transform: scale(1.05); }
+
+.card-img-overlay > .card-block {
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+}
