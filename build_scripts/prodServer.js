@@ -31,13 +31,13 @@ app.get('*', (req, res) => {
 });
 
 
-//app.listen(port, err => err ? console.log(err) : console.log('express started'));
+app.listen(port, err => err ? console.log(err) : console.log('express started'));
 
-spdy.createServer(options, app).listen(port, (error) => {
-    if (error) {
-        console.error(error)
-        return process.exit(1)
-    } else {
-        console.log('Listening on port: ' + port + '.')
-    }
-})
+// spdy.createServer(options, app).listen(port, (error) => {
+//     if (error) {
+//         console.error(error)
+//         return process.exit(1)
+//     } else {
+//         console.log('Listening on port: ' + port + '.')
+//     }
+// })
