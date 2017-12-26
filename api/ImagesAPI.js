@@ -20,7 +20,7 @@ app.get('/:id', function (request, response) {
     });
     readstream.on('error', function (err) {
         response.status(404);
-        response.send('Image not found');
+        response.send('Image not found: ' + JSON.stringify(err));
     });
     readstream.pipe(response);
 });
