@@ -62,9 +62,9 @@ class RoutePage extends React.Component {
 
                             <Card className="route-text">
                                 <CardBlock>
-                                    <h1>{this.state.route.title}</h1>
+                                    <CardTitle className="text-left">{this.state.route.title}</CardTitle>
                                     {this.state.route &&
-                                    <LazyLoad height={200}>
+                                    <LazyLoad>
                                         <div dangerouslySetInnerHTML={{__html: this.state.route.body}}></div></LazyLoad>}
                                 </CardBlock>
                             </Card>

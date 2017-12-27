@@ -9,10 +9,10 @@ class AboutPage extends React.Component {
                 <div className="container" style={{minHeight: 'calc(100vh - 200px)'}} >
                     <div className="row">
                         <div className="col-xs-12">
-                            <div className="card text-center my-5 my-xs-2 p-xs-2 p-sm-2 p-md-5 p-lg-5">
+                            <div className="card text-center m-3 p-xs-3 p-sm-3 p-md-5 p-lg-5">
                                 <h4 className="text-left">Autoriai</h4>
-                                <img src="/img/autoriai.jpg" alt="Dviračių maršrutų autoriai" className="img-thumbnail rounded mx-auto d-block my-4 img-authors"
-                                     />
+                                <img src="/img/autoriai.jpg" alt="Dviračių maršrutų autoriai"
+                                     className="img-thumbnail rounded mx-auto d-block my-4 img-authors"/>
                                 <p className="lead">Mes esame Ieva ir Jonas. Gražiu oru mėgstame dviračiais važinėtis po Lietuvą.</p>
                                 <p className="lead">Šiame bloge rasite visus mūsų išbandytus maršrutus.</p>
                                 <p className="lead">
