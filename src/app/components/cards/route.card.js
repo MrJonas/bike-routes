@@ -17,7 +17,7 @@ class RouteCard extends React.Component {
             <div>
                 <Route render={({history}) => (
                 <Card className="route-card" onClick={() => this.goToRoutePage(history)}>
-                    <LazyLoad height={200}>
+                    <LazyLoad >
                     <CardImg top width="100%" src={`/api/images/${this.props.bikeRoute.main_image_id}`}
                              alt={this.props.bikeRoute.title}
                              style={{cursor: 'pointer'}}/>

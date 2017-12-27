@@ -58,7 +58,7 @@ class RoutePage extends React.Component {
                 <div className="container my-4">
                     {this.state.route &&
                     <div className="row">
-                        <div className="col-8">
+                        <div className="col-md-8">
 
                             <Card className="route-text">
                                 <CardBlock>
@@ -85,7 +85,7 @@ class RoutePage extends React.Component {
                             </Card>
                             }
                         </div>
-                        <div className="col-4">
+                        <div className="col-md-4">
                             <Card className="mb-2">
                                 <CardBlock >
                                     <CardTitle className="text-left">Informacija</CardTitle>

@@ -34,7 +34,9 @@ export default class Example extends React.Component {
         return (
             <div>
                 <Navbar color="inverse"  toggleable>
-                    <NavbarToggler aria-hidden="true" right onClick={this.toggle} />
+                    <NavbarToggler style={{color: "white"}}aria-hidden="true" right onClick={this.toggle} >
+                        <i className="fa fa-bars" aria-hidden="true"></i>
+                    </NavbarToggler>
                     <NavbarBrand href="/#/">Dviračių maršrutai</NavbarBrand>
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
@@ -44,7 +46,7 @@ export default class Example extends React.Component {
                             <NavItem>
                                 <NavLink className={this.state.pathname === ROUTES.ROUTE_LIST ? "active" : ""}  href="/#/marsrutai/">Maršrutai</NavLink>
                             </NavItem>
-                            <NavItem>
+                            <NavItem className="hidden-sm-down">
                                 <NavLink className={this.state.pathname === ROUTES.MAP ? "active" : ""}  href="/#/zemelapis/">Žemėlapis</NavLink>
                             </NavItem>
                             <NavItem>
