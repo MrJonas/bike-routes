@@ -252,7 +252,7 @@ body {
 
 @media (max-width: 768px) {
     .img-authors {
-        max-width: 420px;
+        max-width: 100%;
     }
 }
 
