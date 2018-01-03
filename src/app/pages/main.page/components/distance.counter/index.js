@@ -27,7 +27,7 @@ class DistanceCounter extends React.Component {
                         <div className="container">
                             <div className="row text-center">
                                 <div className="col-12 text-center mb-3">
-                                    <h3><b>Šiuo metu puslapije rasite:</b></h3>
+                                    <h3><b>Šiuo metu puslapyje rasite:</b></h3>
                                 </div>
                             </div>
                             <div className="row text-center">
