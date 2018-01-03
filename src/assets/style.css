@@ -11,8 +11,8 @@ body {
 
 img {
     height:auto !important;
-    min-height:1px
-    min-width:1px
+    min-height:1px;
+    min-width:1px;
 }
 
 .no-padding {
