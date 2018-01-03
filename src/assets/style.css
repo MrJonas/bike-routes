@@ -9,6 +9,10 @@ body {
     min-height: 100%;
 }
 
+img {
+    height:auto !important;
+}
+
 .no-padding {
     padding: 0;
 }
