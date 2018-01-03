@@ -248,6 +248,7 @@ body {
 
 .img-authors {
     max-width: 420px;
+    display:block;
 }
 
 @media (max-width: 768px) {
