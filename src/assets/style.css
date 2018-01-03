@@ -251,6 +251,12 @@ body {
 }
 
 @media (max-width: 768px) {
+    .img-authors {
+        max-width: 420px;
+    }
+}
+
+@media (max-width: 768px) {
     .route-text h1 {
         font-size: 24px;
     }
