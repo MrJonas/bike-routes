@@ -7,6 +7,7 @@ class AboutPage extends React.Component {
         return (
             <div>
                 <div className="container" style={{minHeight: 'calc(100vh - 200px)'}} >
+                    <div>
                     <div className="row">
                         <div className="col-xs-12">
                             <div className="card text-center">
@@ -26,7 +27,8 @@ class AboutPage extends React.Component {
                         </div>
                     </div>
                 </div>
-                <Footer/>
+                    <div>
+                {/*<Footer/>*/}
             </div>
         );
     }
