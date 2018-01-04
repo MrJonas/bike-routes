@@ -247,9 +247,11 @@ body {
 }
 
 .img-authors {
-    min-width: 1px;
-    max-width: 420px;
+    margin: auto;
     display:block;
+    width:auto !important;
+    min-width:1px;
+    max-width: 420px;
 }
 
 @media (max-width: 768px) {
