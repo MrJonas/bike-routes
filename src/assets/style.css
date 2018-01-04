@@ -247,6 +247,7 @@ body {
 }
 
 .img-authors {
+    min-width: 1px;
     max-width: 420px;
     display:block;
 }
