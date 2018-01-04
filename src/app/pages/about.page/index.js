@@ -9,7 +9,7 @@ class AboutPage extends React.Component {
                 <div className="container" style={{minHeight: 'calc(100vh - 200px)'}} >
                     <div className="row">
                         <div className="col-xs-12">
-                            <div className="card text-center m-3 p-xs-3 p-sm-3 p-md-5 p-lg-5">
+                            <div className="card text-center m-3">
                                 <h4 className="text-left">Autoriai</h4>
                                 <div>
                                 <img src="/img/autoriai.jpg" alt="Dviračių maršrutų autoriai"
