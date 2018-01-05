@@ -9,8 +9,8 @@ class AboutPage extends React.Component {
                 <div>
                     <div className="container">
                         <div className="row">
-                            <div className="col-xs-12">
-                                <div className="card">
+                            <div>
+                                <div >
                                     <div className="card-block">
                                     <h4 className="card-title text-left">Autoriai</h4>
                                     <div>
