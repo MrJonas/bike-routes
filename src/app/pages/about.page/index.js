@@ -6,12 +6,12 @@ class AboutPage extends React.Component {
     render() {
         return (
             <div>
-                <div className="container">
-                    <div>
+                <div>
+                    <div className="container">
                         <div className="row">
                             <div className="col-xs-12">
                                 <div className="card">
-                                    <div class="card-block">
+                                    <div className="card-block">
                                     <h4 className="card-title text-left">Autoriai</h4>
                                     <div>
                                         <img src="/img/autoriai.jpg" alt="Dviračių maršrutų autoriai"
