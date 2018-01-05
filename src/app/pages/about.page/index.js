@@ -6,12 +6,13 @@ class AboutPage extends React.Component {
     render() {
         return (
             <div>
-                <div className="container-fluid">
+                <div className="container">
                     <div>
                         <div className="row">
                             <div className="col-xs-12">
-                                <div className="card text-center">
-                                    <h4 className="text-left">Autoriai</h4>
+                                <div className="card">
+                                    <div class="card-block">
+                                    <h4 className="card-title text-left">Autoriai</h4>
                                     <div>
                                         <img src="/img/autoriai.jpg" alt="Dviračių maršrutų autoriai"
                                              className="my-4 img-authors"/>
@@ -25,6 +26,7 @@ class AboutPage extends React.Component {
                                         Tačiau idėjų savo žygiams pasisems ir labiau patyrę.
                                     </p>
                                     <p className="lead">Linkime smagių kelionių!</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
