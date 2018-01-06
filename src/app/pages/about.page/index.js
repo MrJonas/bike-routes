@@ -8,7 +8,7 @@ class AboutPage extends React.Component {
             <div>
                 <div>
                     <div className="container">
-                        <div className="row">
+                        <div className="row py-lg-4">
                             <div>
                                 <div className="card">
                                     <div className="card-block">
