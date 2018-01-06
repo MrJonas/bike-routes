@@ -10,7 +10,7 @@ class AboutPage extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div>
-                                <div >
+                                <div className="card">
                                     <div className="card-block">
                                     <h4 className="card-title text-left">Autoriai</h4>
                                     <div>
