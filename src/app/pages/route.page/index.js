@@ -11,11 +11,13 @@ class RoutePage extends React.Component {
         super();
         this.state = {lightboxIsOpen: false, currentImage: 0, images: [], route: null};
         console.log('STEP 1');
-        this.onChange = this.onChange.bind(this);
     }
 
     componentDidUpdate() {
         console.log('STEP 2');
+    }
+    setRoute(route, images) {
+        this.setState({route, images})
     }
 
     componentDidMount() {
@@ -30,7 +32,7 @@ class RoutePage extends React.Component {
                         return {src: `/api/images/${image.id}`}
                     }) : [];
                     console.log('STEP 4.3');
-                    this.setState({route, images});
+                    this.setRoute({route, images});
                     console.log('STEP 5');
                 }, err => { console.log(err); console.log('STEP 6');})
 
