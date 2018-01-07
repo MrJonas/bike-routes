@@ -10,19 +10,27 @@ class RoutePage extends React.Component {
     constructor() {
         super();
         this.state = {lightboxIsOpen: false, currentImage: 0, images: []};
+        console.log('STEP 1');
+    }
+
+    componentDidUpdate() {
+        console.log('STEP 2');
     }
 
     componentDidMount() {
+        console.log('STEP 3');
         fetch(`/api/route/${this.props.match.params.url}`)
             .then(result => {
+                console.log('STEP 4');
                 result.json().then(route => {
                     let images = route.images ? route.images.map(image => {
                         return {src: `/api/images/${image.id}`}
                     }) : [];
                     this.setState({route, images});
-                }, err => console.log(err))
+                    console.log('STEP 5');
+                }, err => { console.log(err); console.log('STEP 6');})
 
-            }, err => console.log(err));
+            }, err => { console.log(err); console.log('STEP 7');});
     }
 
     closeLightbox() {
