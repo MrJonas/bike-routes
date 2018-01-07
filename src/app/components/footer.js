@@ -11,7 +11,7 @@ class Footer extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
-                            <p className="text-white">Copyright &copy; Dviračių maršrutai 2017</p>
+                            <p className="text-white">Copyright &copy; Dviračių maršrutai 2018</p>
                         </div>
                         <div className="col-md-12">
                             <p>
