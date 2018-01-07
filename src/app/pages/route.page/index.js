@@ -9,8 +9,9 @@ class RoutePage extends React.Component {
 
     constructor() {
         super();
-        this.state = {lightboxIsOpen: false, currentImage: 0, images: []};
+        this.state = {lightboxIsOpen: false, currentImage: 0, images: [], route: null};
         console.log('STEP 1');
+        this.onChange = this.onChange.bind(this);
     }
 
     componentDidUpdate() {
