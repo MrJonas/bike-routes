@@ -7,10 +7,10 @@ class AboutPage extends React.Component {
         return (
             <div>
                 <div>
-                    <div className="container">
+                    <div className="container" style={{minHeight: 'calc(100vh - 200px)'}}>
                         <div className="row py-lg-4">
-                            <div>
-                                <div className="card">
+                            <div className="row py-lg-4">
+                                <div className="card w-100">
                                     <div className="card-block">
                                     <h4 className="card-title text-left">Autoriai</h4>
                                     <div>
