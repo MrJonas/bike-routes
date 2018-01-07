@@ -55,7 +55,7 @@ class RoutePage extends React.Component {
     render() {
         return (
             <div>
-                <div className="container my-4">
+                <div className="container my-4" style={{minHeight: 'calc(100vh - 200px)'}}>
                     {this.state.route &&
                     <div className="row">
                         <div className="col-md-8">
@@ -65,7 +65,8 @@ class RoutePage extends React.Component {
                                     <CardTitle className="text-left">{this.state.route.title}</CardTitle>
                                     {this.state.route &&
                                     <LazyLoad>
-                                        <div dangerouslySetInnerHTML={{__html: this.state.route.body}}></div></LazyLoad>}
+                                        {/*<div dangerouslySetInnerHTML={{__html: this.state.route.body}}></div>*/}
+                                    </LazyLoad>}
                                 </CardBlock>
                             </Card>
 
