@@ -23,9 +23,12 @@ class RoutePage extends React.Component {
             .then(result => {
                 console.log('STEP 4');
                 result.json().then(route => {
+                    console.log('STEP 4.1');
                     let images = route.images ? route.images.map(image => {
+                        console.log('STEP 4.2');
                         return {src: `/api/images/${image.id}`}
                     }) : [];
+                    console.log('STEP 4.3');
                     this.setState({route, images});
                     console.log('STEP 5');
                 }, err => { console.log(err); console.log('STEP 6');})
