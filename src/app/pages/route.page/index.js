@@ -16,8 +16,14 @@ class RoutePage extends React.Component {
     componentDidUpdate() {
         console.log('STEP 2');
     }
-    setRoute(route, images) {
+    setRoute(route) {
+        console.log('STEP 5');
+        let images = route.images ? route.images.map(image => {
+            return {src: `/api/images/${image.id}`}
+        }) : [];
+        console.log('STEP 5.1');
         this.setState({route, images})
+        console.log('STEP 5.2');
     }
 
     componentDidMount() {
@@ -25,16 +31,9 @@ class RoutePage extends React.Component {
         fetch(`/api/route/${this.props.match.params.url}`)
             .then(result => {
                 console.log('STEP 4');
-                result.json().then(route => {
-                    console.log('STEP 4.1');
-                    let images = route.images ? route.images.map(image => {
-                        console.log('STEP 4.2');
-                        return {src: `/api/images/${image.id}`}
-                    }) : [];
-                    console.log('STEP 4.3');
-                    this.setRoute(route, images);
-                    console.log('STEP 5');
-                }, err => { console.log(err); console.log('STEP 6');})
+                result.json().then(
+                    route => this.setRoute(route),
+                    err => { console.log(err); console.log('STEP 6');})
 
             }, err => { console.log(err); console.log('STEP 7');});
     }
