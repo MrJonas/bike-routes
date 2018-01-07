@@ -1,9 +1,6 @@
 import React from 'react';
 import 'whatwg-fetch';
-import {
-    Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button, CardBlock
-} from 'reactstrap';
+import { Card, CardTitle, CardBlock} from 'reactstrap';
 import Lightbox from 'react-images';
 import Footer from './../../components/footer';
 import LazyLoad from 'react-lazyload';
@@ -25,8 +22,7 @@ class RoutePage extends React.Component {
                     this.setState({route, images});
                 }, err => console.log(err))
 
-            }, err => {
-            });
+            }, err => console.log(err));
     }
 
     closeLightbox() {
@@ -63,10 +59,9 @@ class RoutePage extends React.Component {
                             <Card className="route-text">
                                 <CardBlock>
                                     <CardTitle className="text-left">{this.state.route.title}</CardTitle>
-                                    {this.state.route &&
                                     <LazyLoad>
-                                        {/*<div dangerouslySetInnerHTML={{__html: this.state.route.body}}></div>*/}
-                                    </LazyLoad>}
+                                        <div dangerouslySetInnerHTML={{__html: this.state.route.body}}></div>
+                                    </LazyLoad>
                                 </CardBlock>
                             </Card>
 
@@ -107,7 +102,7 @@ class RoutePage extends React.Component {
                                 </CardBlock>
                             </Card>
                             <Card onClick={() => this.showGallery()} style={{cursor: 'pointer'}}>
-                                <CardBlock >
+                                <CardBlock>
                                     <CardTitle className="text-left">Nuotraukų galerija</CardTitle>
                                     <img src={`/api/images/${this.state.route.main_image_id}`}
                                          style={{maxWidth: '100%'}}/>
