@@ -41,10 +41,12 @@ class RoutePage extends React.Component {
     }
 
     closeLightbox() {
+        console.log('STEP 8');
         // this.setState({lightboxIsOpen: false})
     }
 
     gotoNextLightboxImage() {
+        console.log('STEP 10');
         // this.setState({
         //     currentImage: this.state.currentImage + 1,
         // });
@@ -52,12 +54,14 @@ class RoutePage extends React.Component {
     }
 
     gotoPrevLightboxImage() {
+        console.log('STEP 11');
         // this.setState({
         //     currentImage: this.state.currentImage - 1,
         // });
     }
 
     showGallery() {
+        console.log('STEP 12');
         // this.setState({lightboxIsOpen: true})
 
     }
