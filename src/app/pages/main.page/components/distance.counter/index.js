@@ -1,5 +1,4 @@
 import React from 'react';
-import {Jumbotron} from 'reactstrap';
 
 class DistanceCounter extends React.Component {
 

@@ -16,13 +16,15 @@ class RoutePage extends React.Component {
     componentDidUpdate() {
         console.log('STEP 2');
     }
+
     setRoute(route) {
         console.log('STEP 5');
         let images = route.images ? route.images.map(image => {
             return {src: `/api/images/${image.id}`}
         }) : [];
         console.log('STEP 5.1');
-        this.setState({images});
+        console.log(this.setState);
+        this.setState({route});
         console.log('STEP 5.2');
     }
 
@@ -39,24 +41,24 @@ class RoutePage extends React.Component {
     }
 
     closeLightbox() {
-        this.setState({lightboxIsOpen: false})
+        // this.setState({lightboxIsOpen: false})
     }
 
     gotoNextLightboxImage() {
-        this.setState({
-            currentImage: this.state.currentImage + 1,
-        });
+        // this.setState({
+        //     currentImage: this.state.currentImage + 1,
+        // });
 
     }
 
     gotoPrevLightboxImage() {
-        this.setState({
-            currentImage: this.state.currentImage - 1,
-        });
+        // this.setState({
+        //     currentImage: this.state.currentImage - 1,
+        // });
     }
 
     showGallery() {
-        this.setState({lightboxIsOpen: true})
+        // this.setState({lightboxIsOpen: true})
 
     }
 
