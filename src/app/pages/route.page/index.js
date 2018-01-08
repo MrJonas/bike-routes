@@ -22,7 +22,7 @@ class RoutePage extends React.Component {
             return {src: `/api/images/${image.id}`}
         }) : [];
         console.log('STEP 5.1');
-        this.setState({route});
+        this.setState({images});
         console.log('STEP 5.2');
     }
 
