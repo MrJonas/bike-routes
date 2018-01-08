@@ -24,6 +24,8 @@ class RoutePage extends React.Component {
         }) : [];
         console.log('STEP 5.1');
         console.log(this.setState);
+        console.log(route);
+        console.log(images);
         this.setState({route, images});
         console.log('STEP 5.2');
     }
