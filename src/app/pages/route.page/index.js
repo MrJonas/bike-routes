@@ -122,21 +122,21 @@ class RoutePage extends React.Component {
                                         }
                                 </CardBlock>
                             </Card>
-                            <Card onClick={() => this.showGallery()} style={{cursor: 'pointer'}}>
-                                <CardBlock>
-                                    <CardTitle className="text-left">Nuotraukų galerija</CardTitle>
-                                    <img src={`/api/images/${this.state.route.main_image_id}`}
-                                         style={{maxWidth: '100%'}}/>
-                                    <Lightbox
-                                        currentImage={this.state.currentImage}
-                                        images={this.state.images}
-                                        isOpen={this.state.lightboxIsOpen}
-                                        onClickPrev={() => this.gotoPrevLightboxImage()}
-                                        onClickNext={() => this.gotoNextLightboxImage()}
-                                        onClose={() => this.closeLightbox()}
-                                    />
-                                </CardBlock>
-                            </Card>
+                            {/*<Card onClick={() => this.showGallery()} style={{cursor: 'pointer'}}>*/}
+                                {/*<CardBlock>*/}
+                                    {/*<CardTitle className="text-left">Nuotraukų galerija</CardTitle>*/}
+                                    {/*<img src={`/api/images/${this.state.route.main_image_id}`}*/}
+                                         {/*style={{maxWidth: '100%'}}/>*/}
+                                    {/*<Lightbox*/}
+                                        {/*currentImage={this.state.currentImage}*/}
+                                        {/*images={this.state.images}*/}
+                                        {/*isOpen={this.state.lightboxIsOpen}*/}
+                                        {/*onClickPrev={() => this.gotoPrevLightboxImage()}*/}
+                                        {/*onClickNext={() => this.gotoNextLightboxImage()}*/}
+                                        {/*onClose={() => this.closeLightbox()}*/}
+                                    {/*/>*/}
+                                {/*</CardBlock>*/}
+                            {/*</Card>*/}
                         </div>
                     </div>
                     }
