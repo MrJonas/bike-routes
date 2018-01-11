@@ -21,7 +21,8 @@ class RoutePage extends React.Component {
                 thumbnailHeight: 100
             }
         }) : [];
-        this.setState({route, images});
+        this.setState({route});
+        this.setState({images});
     }
 
     componentDidMount() {
