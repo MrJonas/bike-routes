@@ -92,8 +92,7 @@ class RoutePage extends React.Component {
                             <Card className="mb-2">
                                 <CardBlock >
                                     <CardTitle className="text-left">Galerija</CardTitle>
-                                    {this.state.route && this.state.images.length > 0 &&
-                                    <Gallery images={this.state.images} maxRows="3"/>}
+                                    <Gallery images={this.state.images} maxRows="3"/>
                                 </CardBlock>
                             </Card>
                         </div>
