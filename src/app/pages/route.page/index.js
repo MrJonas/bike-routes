@@ -13,14 +13,15 @@ class RoutePage extends React.Component {
     }
 
     setRoute(route) {
-        let images = route.images ? route.images.map(image => {
-            return {
-                src: `/api/images/${image.id}`,
-                thumbnail:  `/api/images/${image.id}`,
-                thumbnailWidth: 200,
-                thumbnailHeight: 100
-            }
-        }) : [];
+        // let images = route.images ? route.images.map(image => {
+        //     return {
+        //         src: `/api/images/${image.id}`,
+        //         thumbnail:  `/api/images/${image.id}`,
+        //         thumbnailWidth: 200,
+        //         thumbnailHeight: 100
+        //     }
+        // }) : [];
+        let images = [];
         this.setState({route});
         this.setState({images});
     }
