@@ -1,73 +1,38 @@
 import React from 'react';
 import 'whatwg-fetch';
 import { Card, CardTitle, CardBlock} from 'reactstrap';
-import Lightbox from 'react-images';
 import Footer from './../../components/footer';
 import LazyLoad from 'react-lazyload';
+import Gallery from 'react-grid-gallery';
 
 class RoutePage extends React.Component {
 
     constructor() {
         super();
         this.state = {lightboxIsOpen: false, currentImage: 0, images: [], route: null};
-        console.log('STEP 1');
-    }
-
-    componentDidUpdate() {
-        console.log('STEP 2');
     }
 
     setRoute(route) {
-        console.log('STEP 5');
         let images = route.images ? route.images.map(image => {
-            return {src: `/api/images/${image.id}`}
+            return {
+                src: `/api/images/${image.id}`,
+                thumbnail:  `/api/images/${image.id}`,
+                thumbnailWidth: 200,
+                thumbnailHeight: 100
+            }
         }) : [];
-        console.log('STEP 5.1');
-        console.log(this.setState);
-        console.log(route);
-        console.log(images);
         this.setState({route, images});
-        console.log('STEP 5.2');
     }
 
     componentDidMount() {
-        console.log('STEP 3');
         fetch(`/api/route/${this.props.match.params.url}`)
             .then(result => {
-                console.log('STEP 4');
                 result.json().then(
                     route => this.setRoute(route),
-                    err => { console.log(err); console.log('STEP 6');})
+                    err => console.log(err))
 
-            }, err => { console.log(err); console.log('STEP 7');});
+            }, err => console.log(err));
     }
-
-    closeLightbox() {
-        console.log('STEP 8');
-        // this.setState({lightboxIsOpen: false})
-    }
-
-    gotoNextLightboxImage() {
-        console.log('STEP 10');
-        // this.setState({
-        //     currentImage: this.state.currentImage + 1,
-        // });
-
-    }
-
-    gotoPrevLightboxImage() {
-        console.log('STEP 11');
-        // this.setState({
-        //     currentImage: this.state.currentImage - 1,
-        // });
-    }
-
-    showGallery() {
-        console.log('STEP 12');
-        // this.setState({lightboxIsOpen: true})
-
-    }
-
 
     render() {
         return (
@@ -122,21 +87,12 @@ class RoutePage extends React.Component {
                                         }
                                 </CardBlock>
                             </Card>
-                            {/*<Card onClick={() => this.showGallery()} style={{cursor: 'pointer'}}>*/}
-                                {/*<CardBlock>*/}
-                                    {/*<CardTitle className="text-left">Nuotraukų galerija</CardTitle>*/}
-                                    {/*<img src={`/api/images/${this.state.route.main_image_id}`}*/}
-                                         {/*style={{maxWidth: '100%'}}/>*/}
-                                    {/*<Lightbox*/}
-                                        {/*currentImage={this.state.currentImage}*/}
-                                        {/*images={this.state.images}*/}
-                                        {/*isOpen={this.state.lightboxIsOpen}*/}
-                                        {/*onClickPrev={() => this.gotoPrevLightboxImage()}*/}
-                                        {/*onClickNext={() => this.gotoNextLightboxImage()}*/}
-                                        {/*onClose={() => this.closeLightbox()}*/}
-                                    {/*/>*/}
-                                {/*</CardBlock>*/}
-                            {/*</Card>*/}
+                            <Card className="mb-2">
+                                <CardBlock >
+                                    <CardTitle className="text-left">Galerija</CardTitle>
+                                    <Gallery images={this.state.images} maxRows="3"/>
+                                </CardBlock>
+                            </Card>
                         </div>
                     </div>
                     }
