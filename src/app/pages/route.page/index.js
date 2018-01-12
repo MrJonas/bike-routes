@@ -5,6 +5,8 @@ import Footer from './../../components/footer';
 import LazyLoad from 'react-lazyload';
 import Gallery from 'react-grid-gallery';
 
+
+
 const IMAGES =
     [{
         src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
@@ -28,7 +30,10 @@ const IMAGES =
             thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
             thumbnailWidth: 320,
             thumbnailHeight: 212
-        }]
+        }];
+
+const DMGallery = (props) =>
+    <Gallery images={props.images} maxRows="3"/>;
 
 class RoutePage extends React.Component {
 
@@ -117,7 +122,7 @@ class RoutePage extends React.Component {
                             <Card className="mb-2">
                                 <CardBlock >
                                     <CardTitle className="text-left">Galerija</CardTitle>
-                                    <Gallery images={IMAGES} maxRows="3"/>
+                                    <DMGallery images={this.state.images}/>
                                 </CardBlock>
                             </Card>
                         </div>
