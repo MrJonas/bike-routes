@@ -3,6 +3,7 @@ import {render} from 'react-dom';
 import {Route, HashRouter, withRouter} from 'react-router-dom';
 
 require("./../assets/style.css");
+require('es6-object-assign').polyfill();
 import 'bootstrap/dist/css/bootstrap.css';
 
 import AboutPage from './pages/about.page';
