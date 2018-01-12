@@ -1,6 +1,3 @@
 require('babel-register');
-require("babel-core").transform("code", {
-    plugins: ["transform-object-assign"]
-});
-require('babel-plugin-transform-object-assign');
+require('es6-object-assign').polyfill();
 require('./build_scripts/devServer');
