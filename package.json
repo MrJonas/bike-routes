@@ -44,6 +44,7 @@
     "mz": "^2.7.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-facebook": "^4.2.1",
     "react-google-maps": "^8.4.0",
     "react-grid-gallery": "^0.4.7",
     "react-images": "^0.5.11",

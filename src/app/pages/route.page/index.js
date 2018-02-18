@@ -1,12 +1,13 @@
 import React from 'react';
 import 'whatwg-fetch';
-import { Card, CardTitle, CardBlock} from 'reactstrap';
+import {Card, CardTitle, CardBlock} from 'reactstrap';
 import Footer from './../../components/footer';
 import LazyLoad from 'react-lazyload';
 import Gallery from 'react-grid-gallery';
+import FacebookProvider, { Page } from 'react-facebook';
 
 const DMGallery = (props) =>
-    <Gallery images={props.images} maxRows="3"/>;
+    <Gallery images={props.images} maxRows={3}/>;
 
 class RoutePage extends React.Component {
 
@@ -19,7 +20,7 @@ class RoutePage extends React.Component {
         let images = route.images ? route.images.map(image => {
             return {
                 src: `/api/images/${image.id}`,
-                thumbnail:  `/api/images/${image.id}`,
+                thumbnail: `/api/images/${image.id}`,
                 thumbnailWidth: 200,
                 thumbnailHeight: 100
             }
@@ -29,6 +30,7 @@ class RoutePage extends React.Component {
     }
 
     componentDidMount() {
+        document.addEventListener('fb_init', e => FB.XFBML.parse());
         fetch(`/api/route/${this.props.match.params.url}`)
             .then(result => {
                 result.json().then(
@@ -75,26 +77,34 @@ class RoutePage extends React.Component {
                             <Card className="mb-2">
                                 <CardBlock >
                                     <CardTitle className="text-left">Informacija</CardTitle>
-                                        <div>
-                                            <i className="fa fa-road" aria-hidden="true"></i>
-                                            <span> {this.state.route.distance} km </span>
-                                        </div>
-                                        <div>
-                                            <i className="fa fa-clock-o" aria-hidden="true"></i>
-                                            <span> {this.state.route.duration} </span>
-                                        </div>
-                                        {this.state.route.access_by_train &&
-                                            <div>
-                                                <i className="fa fa-train" aria-hidden="true"></i>
-                                                <span> Maršrutas pasiekiamas traukiniu </span>
-                                            </div>
-                                        }
+                                    <div>
+                                        <i className="fa fa-road" aria-hidden="true"></i>
+                                        <span> {this.state.route.distance} km </span>
+                                    </div>
+                                    <div>
+                                        <i className="fa fa-clock-o" aria-hidden="true"></i>
+                                        <span> {this.state.route.duration} </span>
+                                    </div>
+                                    {this.state.route.access_by_train &&
+                                    <div>
+                                        <i className="fa fa-train" aria-hidden="true"></i>
+                                        <span> Maršrutas pasiekiamas traukiniu </span>
+                                    </div>
+                                    }
                                 </CardBlock>
                             </Card>
                             <Card className="mb-2">
                                 <CardBlock >
                                     <CardTitle className="text-left">Galerija</CardTitle>
                                     <DMGallery images={this.state.images}/>
+                                </CardBlock>
+                            </Card>
+                            <Card className="mb-2">
+                                <CardBlock >
+                                    <CardTitle className="text-left">Sek mus facebook'e!</CardTitle>
+                                    <FacebookProvider appId="fb-root">
+                                        <Page href="https://www.facebook.com/dviraciumarsrutai.lt/" tabs=""/>
+                                    </FacebookProvider>
                                 </CardBlock>
                             </Card>
                         </div>
